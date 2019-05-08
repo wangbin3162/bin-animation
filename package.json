@@ -13,7 +13,7 @@
   "files": [
     "lib"
   ],
-  "private": true,
+  "private": false,
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",

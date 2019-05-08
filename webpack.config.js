@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 // 清除文件
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 // 拷贝插件
