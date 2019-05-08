@@ -1,26 +1,47 @@
 {
   "name": "bin-animation",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "一个基于vue transition组件钩子配合的动画库",
+  "main": "lib/index.js",
+  "keywords": [
+    "vue",
+    "animations",
+    "transition",
+    "components"
+  ],
+  "author": "wang bin",
+  "files": [
+    "lib"
+  ],
   "private": true,
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:lib": "gulp build"
+    "build:lib": "webpack --mode production --config webpack.config.js"
   },
+  "homepage": "https://wangbin3162.github.io/bin-animation-doc/",
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "bin-ui": "^1.4.2",
     "core-js": "^2.6.5",
     "vue": "^2.6.10"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.3",
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
     "browserify": "^16.2.3",
+    "clean-webpack-plugin": "^2.0.2",
+    "copy-webpack-plugin": "^5.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "gulp": "^4.0.0",
@@ -30,7 +51,10 @@
     "gulp-uglify": "^3.0.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
-    "vue-template-compiler": "^2.5.21"
+    "vinyl-source-stream": "^2.0.0",
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2"
   },
   "eslintConfig": {
     "root": true,

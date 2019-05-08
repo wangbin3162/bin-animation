@@ -38,7 +38,7 @@
             transform: `translate3d(0,0,0) scale(1)`
           }
         }
-        animations.registerAnimation({
+        animations.create({
           name: 'move',
           animation,
           presets: {
@@ -46,10 +46,10 @@
             easing: 'linear'// 动画曲线
           }
         })
-        animations.runAnimation(el, 'move', done)
+        animations.run(el, 'move', done)
       },
       afterEnter: function (el) {
-        animations.unregisterAnimation('move')
+        animations.remove('move')
         el.style.animation = ''
       },
       leave: function (el, done) {
@@ -64,7 +64,7 @@
             transform: `translate3d(0,100%,0) scale(0)`
           }
         }
-        animations.registerAnimation({
+        animations.create({
           name: 'out',
           animation,
           presets: {
@@ -72,10 +72,10 @@
             easing: 'linear'
           }
         })
-        animations.runAnimation(el, 'out', done)
+        animations.run(el, 'out', done)
       },
       afterLeave: function (el) {
-        animations.unregisterAnimation('out')
+        animations.remove('out')
         el.style.animation = ''
       }
     }

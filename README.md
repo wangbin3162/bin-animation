@@ -1,29 +1,55 @@
 # bin-animation
 
-## Project setup
-```
-npm install
+## 1.全局安装webpack4
+
+```bash
+yarn add global webpack
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## 2.在一个项目中安装基础依赖
+
+```bash
+yarn add  webpack webpack-cli --dev
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+## 3.安装编译es6的必备依赖
+
+```bash
+yarn add @babel/core @babel/preset-env @babel/plugin-transform-runtime  --dev
+yarn add  @babel/polyfill  @babel/runtime
 ```
 
-### Run your tests
-```
-npm run test
+其他插件
+
+```bash
+yarn add copy-webpack-plugin clean-webpack-plugin --dev
 ```
 
-### Lints and fixes files
-```
-npm run lint
+## 4.配置.babelrc文件
+
+```json
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions"
+          ]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-runtime"
+  ]
+}
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 5.配置webpack.config.js
+
+```javascript
+
+```
+

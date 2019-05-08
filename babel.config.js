@@ -1,5 +1,12 @@
 module.exports = {
   presets: [
-    '@vue/app'
-  ]
+    '@vue/app',
+    [
+      '@babel/env',
+      {
+        targets: ['last 2 versions', 'ie >= 7']
+      }
+    ]
+  ],
+  plugins: ['@babel/plugin-transform-runtime']
 }
