@@ -1,6 +1,6 @@
 {
   "name": "bin-animation",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "一个基于vue transition组件钩子配合的动画库",
   "main": "lib/index.js",
   "keywords": [

@@ -2,20 +2,17 @@
 
 ### CDN 安装
 
-通过[unpkg.com/bin-ui](https://unpkg.com/bin-ui/) 可以看到 bin-ui
-最新版本的资源，也可以切换版本选择需要的资源，在页面上引入 js 和 css
-文件即可开始使用：
+通过[unpkg.com/bin-animation](https://unpkg.com/bin-animation/) 可以看到 bin-animation
+最新版本的资源
 
 ```
-<!-- import Vue.js -->
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<!-- import stylesheet -->
-<link rel="stylesheet" href="https://unpkg.com/bin-ui@1.3.2/lib/styles/index.css">
-<!-- import bin-ui -->
-<script src="https://unpkg.com/bin-ui@1.3.2/lib/bin-ui.umd.min.js"></script>
+<!-- import min -->
+<script src="https://unpkg.com/bin-animation@1.0.0/lib/bin-animation.min.js"></script>
 ```
+
+使用这种方式直接引入至浏览器，动画库会往全局注入一个Animation的对象，使用时直接使用Animation.create创建即可，值得注意的是，如果Animation存在冲突则需要重新命名。
     
-`@1.3.2` 表示版本号，我们建议锁定版本号来保证代码的稳定性
+`@1.0.0` 表示版本号，我们建议锁定版本号来保证代码的稳定性
 
 ### npm 安装
 
@@ -23,9 +20,9 @@
 es6配合使用。并且支持按需引入
 
 ```shell
-npm i bin-ui -S
+npm i bin-animation -S
 # or 
-yarn add bin-ui
+yarn add bin-animation
 ```
 
 如果您了解node.js、npm安装，并希望配合webpack使用，请阅读下一节：[快速上手](/#/start)。

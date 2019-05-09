@@ -1,24 +1,18 @@
-## 演示案例1
+## simple 示例
 
-演示案例1
+基本动画注册和调用，从当前位置移动至右侧100像素。
 
 :::demo 
 ```html
 <template>
   <div class="animation-demo">
     <div class="ctrl">
-      <b-button @click="demo01=!demo01" size="small">测试按钮</b-button>
+      <b-button @click="runAnimate" size="small">测试按钮</b-button>
     </div>
-    <div class="animation-box">
-        <transition
-            @enter="enter"
-            @after-enter="afterEnter"
-            @leave="leave"
-            @after-leave="afterLeave">
-          <div class="transition-box" ref="box1"
+    <div class="animation-box" style="height:100px;">
+          <div class="transition-box" ref="box"
                v-show="demo01">box
           </div>
-        </transition>
     </div>
   </div>
 </template>
@@ -34,57 +28,25 @@ export default {
     }
   },
   methods: {
-    enter: function (el, done) {
-      let animation = {
-        0: {
-          transform: `translate3d(0,0,0) scale(.5)`
-        },
-        50: {
-          transform: `translate3d(100%,0,0) scale(1.1)`
-        },
-        100: {
-          transform: `translate3d(0,0,0) scale(1)`
-        }
-      }
+    runAnimate(){
+      let el = this.$refs['box']
+      // 创建动画
       animations.create({
-        name: 'move',
-        animation,
-        presets: {
-          duration: 400,// 动画时长
-          easing: 'linear'// 动画曲线
-        }
+          name: 'move',
+          animation: [
+            [0,0], 
+            [100,0]
+          ],
+          presets: {
+            duration: 1000,
+            easing: 'linear'
+          }
+        })
+      // 运行动画
+      animations.run(el, 'move', function() {
+         animations.remove('move')// 如果需要多次使用的动画可不删除
+         el.style.animation = ''// 如果需要停止则不需要清空其animation属性 否则会返回至起始位置
       })
-      animations.run(el, 'move', done)
-    },
-    afterEnter: function (el) {
-      animations.remove('move')
-      el.style.animation = ''
-    },
-    leave: function (el, done) {
-      let animation = {
-        0: {
-          transform: `translate3d(0,0,0) scale(1)`
-        },
-        50: {
-          transform: `translate3d(0,0,0) scale(1.1)`
-        },
-        100: {
-          transform: `translate3d(0,100%,0) scale(0)`
-        }
-      }
-      animations.create({
-        name: 'out',
-        animation,
-        presets: {
-          duration: 400,
-          easing: 'linear'
-        }
-      })
-      animations.run(el, 'out', done)
-    },
-    afterLeave: function (el) {
-      animations.remove('out')
-      el.style.animation = ''
     }
   }
 }
