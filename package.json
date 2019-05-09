@@ -1,6 +1,6 @@
 {
   "name": "bin-animation",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "一个基于vue transition组件钩子配合的动画库",
   "main": "lib/index.js",
   "keywords": [
@@ -23,13 +23,13 @@
   },
   "homepage": "https://wangbin3162.github.io/bin-animation-doc/",
   "dependencies": {
-    "babel-runtime": "^6.26.0",
+    "babel-runtime": "^6.26.0"
+  },
+  "devDependencies": {
     "bin-ui": "^1.4.2",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.6"
-  },
-  "devDependencies": {
+    "vue-router": "^3.0.6",
     "@babel/core": "^7.4.3",
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.3",
