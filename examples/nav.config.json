@@ -27,16 +27,22 @@
       "path": "/component",
       "items": [
         {
-          "desc": "simple 示例",
+          "desc": "示例1 (基础)",
           "icon": "ios-watch",
           "name": "demo01",
           "path": "/demo01"
         },
         {
-          "desc": "复杂 示例",
+          "desc": "示例2 (弹窗)",
           "icon": "ios-watch",
           "name": "demo02",
           "path": "/demo02"
+        },
+        {
+          "desc": "示例3 (cubic-bezier)",
+          "icon": "ios-watch",
+          "name": "demo03",
+          "path": "/demo03"
         }
       ]
     }

@@ -24,12 +24,13 @@ export default {
   name: 'Demo',
   data () {
     return {
-      demo01: true
+      demo01: false
     }
   },
   methods: {
     runAnimate(){
       let el = this.$refs['box']
+      this.demo01=true
       // 创建动画
       animations.create({
           name: 'move',
@@ -43,9 +44,10 @@ export default {
           }
         })
       // 运行动画
-      animations.run(el, 'move', function() {
+      animations.run(el, 'move', ()=> {
          animations.remove('move')// 如果需要多次使用的动画可不删除
          el.style.animation = ''// 如果需要停止则不需要清空其animation属性 否则会返回至起始位置
+         this.demo01=false
       })
     }
   }
