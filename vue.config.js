@@ -1,6 +1,7 @@
 const markdownRender = require('markdown-it')()
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/preview/bin-animation' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '' : '/',
+  outputDir: 'docs',
   productionSourceMap: false,
   // 修改 pages 入口
   pages: {

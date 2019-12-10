@@ -1,6 +1,6 @@
 # bin-animation
 
-[示例](https://wangbin3162.github.io/preview/bin-animation/)
+[document](https://wangbin3162.gitee.io/bin-animation/)
 
 bin-animation是一个关键帧动画库，结合vue transition组件的钩子函数，我们可以快速的实现复杂的动画效果。
 您可以使用js再浏览器中动态的生成css关键帧动画。并插入一个 style 标签中,这允许您根据位置动态的计算值，并允许您实际高效地运行动画，
