@@ -9,8 +9,8 @@ module.exports = {
     app: './src/index.js'
   },
   output: {
-    path: path.resolve(__dirname, 'lib'), //输出目录
-    filename: 'bin-animation.min.js' //输出文件名称，建议与源文件同名
+    path: path.resolve(__dirname, 'lib'), // 输出目录
+    filename: 'bin-animation.min.js' // 输出文件名称，建议与源文件同名
   },
   module: {
     rules: [{
