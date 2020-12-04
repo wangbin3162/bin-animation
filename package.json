@@ -41,7 +41,7 @@
     "core-js": "^2.6.5",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "highlight.js": "^9.15.6",
+    "highlight.js": "^10.4.1",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.0.2",
     "markdown-it-container": "^2.0.0",
